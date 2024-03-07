@@ -1,12 +1,166 @@
-<!DOCTYPE html>
-<html lang="en">
-    <meta charset="UTF-8" />
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="" />
-    <style></style>
-    <script src=""></script>
-    <body>
-        <p>Hello world!</p>
-    </body>
+<html>
+  <head>
+    <!-- Meta Data -->
+    <title>[Placeholder]</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+
+    <meta property="og:site_name" content="[Placeholder]"/>
+    <meta property="og:title" content="[Placeholder]" />
+    <meta property="og:url" content="https://lis351.harutohiroki.com/"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="/assets/images/logo.png"/>
+    <meta property="og:description" content="[Placeholder]"/>
+    <meta property="og:locale" content="en_US" />
+    <meta content="[Placeholder]" name="description" />
+
+    <meta name="twitter:title" content="[Placeholder]"/>
+    <meta name="twitter:description" content="[Placeholder]"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image" content="/assets/images/logo.png"/>
+    
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png"> 
+    <link rel="icon" type="image/png" href="assets/images/logo.png"> 
+    <meta name="revisit-after" content="2 days">
+    <meta name="keywords" content="Phong Do, [Placeholder], HarutoHiroki">
+
+    <link rel="canonical" href="https://lis351.harutohiroki.com/"/>
+    <meta name="theme-color" content="#00FFD9">
+    
+    <!-- CSS -->
+    <link href="assets/css/main.css" type="text/css" rel="stylesheet">
+    <link href="assets/css/extra.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <!-- JavaScript -->
+    <script src="assets/js/smoothscroll.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="assets/js/main.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+
+  <body class= "sound_playing">
+    <div class="loader-sw">
+      <img src="assets/images/logo.png">
+      <h1>LOADING</h1>
+      <script>
+        $(window).on("load",function(){
+            $(".loader-sw").fadeOut(360);
+        });
+      </script>
+    </div>
+    
+    <section class="fullscreen">
+      <div class="background" style="background-image: url('assets/images/unknown.png')" alt="background-image">
+        <audio id="bgm" loop src="assets/audio/Oku-No-In.mp3" type="audio/mpeg"></audio>
+      </div>
+
+      <!-- Navigation Bar-->
+      <div class="center-object">
+        <div class="bar">
+          <div id="navdrop" class="nav-bar" style="background-color: rgba(255, 255, 255, 0); position: absolute; left: 5%; top:5%;">
+            <span class="nav-bars" style="background-color: rgba(255, 255, 255, 0);"></span>
+            <span class="nav-close-btn" style="background-color: rgba(255, 255, 255, 0);"></span>
+            <div class="dropdown">
+              <div class="dropdown-content">
+                <a href="#about" class="asbestos-text">About</a>
+                <a href="/services" class="asbestos-text">Services</a>
+                <a href="https://graphtool.harutohiroki.com/" class="asbestos-text" target="_blank">GraphTool</a>
+                <a href="#contact" class="asbestos-text">Contact</a>
+                <a href="https://www.paypal.me/realharutohiroki" class="asbestos-text" target="_blank">Donate</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bar-logo">
+            <a href="/" >
+              <img src="assets/images/logo.png" style="width: 150px; max-width: 150px; height: auto; padding: 0 0" alt="Logo" />
+            </a>
+          </div>
+          <div class="bar-btn">
+            <a id="bar1" href="#about" class="btn" style="color: #7f8c8d; padding: 0 .3em;" >About</a>   
+            <a id="bar2" href="/services" class="btn" style="color: #7f8c8d; padding: 0 .3em;">Services</a>
+            <a id="bar3" href="https://graphtool.harutohiroki.com/" class="btn" style="color: #7f8c8d; padding: 0 .3em;" target="_blank" >Graph</a>   
+            <a id="bar4" href="#contact" class="btn" style="color: #7f8c8d; padding: 0 .3em;" >Contact</a>   
+            <a id="bar5" href="https://www.paypal.me/realharutohiroki" class="btn" style="color: #7f8c8d; padding: 0 0;" target="_blank" >Donate</a>
+          </div>
+        </div>
+
+        <div class="container" style="padding: 0 0em;">
+          <section class="me unset">
+            <div class="unset">
+              <h1 class="title center">Welcome</h1>
+            </div>
+          </section>
+          <div class="buttons">
+            <a href="#about" class="btn" style="border: 3px solid #1abc9c; height: auto">Discover</a>
+          </div>
+          <div id="br" class="box-container row"></div>
+        </div>
+        <p class="bgm-toggle">Sound</p>
+        <ul class="sound_vis bgm-toggle" style="position: absolute; bottom: 5; right: 5;">
+          <li class="sound_vis line1"></li>
+          <li class="sound_vis line2"></li>
+          <li class="sound_vis line3"></li>
+          <li class="sound_vis line4"></li>
+          <li class="sound_vis line5"></li>
+          <li class="sound_vis line6"></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="box-container column" id="about" style="background-color: #18191a; filter:drop-shadow(5px 5px 0 rgba(36, 38, 41, 0.6))">
+        <div class="one-full column center"><h1><span style="color: #1abc9c;">About</span></h1></div>
+        <div class="one-full column center">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+
+      <div class="box-container column" id="contact" style="background-color: #18191a; filter:drop-shadow(5px 5px 0 rgba(36, 38, 41, 0.6))">
+        <div class="one-full column center"><h1><span style="color: #1abc9c;">Contact</span></h1></div>
+        <form id="contact-form">
+
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name.." required>
+        
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" placeholder="Your email.." required>
+
+          <label for="phone">Phone Number</label>
+          <input type="text" id="phone" name="phone" placeholder="Your phone number..">
+        
+          <label for="message">Subject</label>
+          <textarea id="message" name="message" placeholder="Write something.." style="height:200px" required></textarea>
+        
+          <button class="btn" type="submit" style="border: 3px solid #1abc9c; height: auto">Submit</button>
+        
+        </form>
+        <script src="assets/js/contact-form.js"></script>
+      </div>
+    </section>
+    
+    <footer class="center box-container" style="border-radius: 0; background-color:black;">
+      <div class="fbarcontent"><p style="margin: 0;">Made with love from the [Placeholder] team</p></div>
+
+      <div class="fbarcontent center" style="width: 300px; overflow: hidden; margin-top: 15px !important; margin-bottom: 15px !important;">
+        <div style="float: left;">
+          <p><a href="#about" class="asbestos-text">About us</a></p>
+          <p><a href="/services" class="asbestos-text">Services</a></p>
+          <p><a href="https://graphtool.harutohiroki.com/" class="asbestos-text" target="_blank">Measurements</a></p>
+        </div>
+        <div style="float:right;">
+          <p><a href="#contact" class="asbestos-text">Contact</a></p>
+          <p><a href="/privacy" class="asbestos-text">Privacy Policy</a></p>
+          <p><a href="/terms-of-service" class="asbestos-text">Terms of Service</a></p>
+        </div>
+      </div>
+
+      <div class="fbarcontent" style="margin-bottom: 1%;"><p style="margin: 0;">© 2024 [Placeholder]</p></div>
+    </footer>
+  </body>
 </html>
