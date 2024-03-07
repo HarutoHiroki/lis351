@@ -7,7 +7,6 @@ setInterval(function threeBar(){
     document.getElementById("bar3").style.display = "initial";
     document.getElementById("bar4").style.display = "initial";
     document.getElementById("bar5").style.display = "initial";
-    document.getElementById("br").style.display = "initial";
   } else {
     document.getElementById("navdrop").style.display = "initial";
     document.getElementById("bar1").style.display = "none";
@@ -15,7 +14,6 @@ setInterval(function threeBar(){
     document.getElementById("bar3").style.display = "none";
     document.getElementById("bar4").style.display = "none";
     document.getElementById("bar5").style.display = "none";
-    document.getElementById("br").style.display = "none";
   }
 }, 69);
 
@@ -37,10 +35,11 @@ window.addEventListener("load",(
     }
 
     let bgm = document.getElementById("bgm");
-    bgm.volume = 0.15;
+    if (bgm) bgm.volume = 0.15;
 
     document.querySelectorAll(".bgm-toggle").forEach(function (e) {
-      e.addEventListener("click", function () {
+      if(e){
+        e.addEventListener("click", function () {
         if (bgm.paused) {
           bgm.play();
           document.body.classList.add("sound_playing");
@@ -49,6 +48,7 @@ window.addEventListener("load",(
           document.body.classList.remove("sound_playing");
         }
       });
+      }
     });
   }
 ));
